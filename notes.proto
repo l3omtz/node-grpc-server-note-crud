@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package notes;
+
 // Represents the Note Model object 
 message Note {
     string id = 1;
