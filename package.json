@@ -1,0 +1,14 @@
+{
+  "name": "node-grpc-server-note-crud",
+  "version": "1.0.0",
+  "description": "gRPC Server and Client Example for CRUD Note Service",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest test"
+  },
+  "author": "Leo Martinez",
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^8.3.2"
+  }
+}
