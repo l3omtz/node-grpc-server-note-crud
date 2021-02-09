@@ -2,9 +2,20 @@ syntax = "proto3";
 
 package notes;
 
+service NotesService {
+    // The List method accepts an Empty Message and returns NoteList Message
+    rpc List (Empty) returns (NoteList) {}
+}
+
+message Empty {}
+
 // Represents the Note Model object 
 message Note {
     string id = 1;
     string title = 2;
     string content = 3; 
+}
+
+message NoteList {
+    repeated Note notes = 1;
 }
