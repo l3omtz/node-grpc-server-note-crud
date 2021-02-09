@@ -1,6 +1,6 @@
-const grpc = require('@grpc/grpc-js');
-const protoLoader = require('@grpc/proto-loader');
-const uuidv1 = require('uuid')
+import grpc from '@grpc/grpc-js'
+import protoLoader from '@grpc/proto-loader';
+import { v1 } from 'uuid';
 const PROTO_PATH = './notes.proto';
 const notes = [
     { id: '1', title: 'Note 1', content: 'Content 1'},
@@ -30,7 +30,7 @@ const list = (call, callback) => {
 
 const insert = (call, callback) => {
     let note = call.request;
-    note.id = uuidv1.v1()
+    note.id = v1()
     notes.push(note)
     callback(null, note)
 }
