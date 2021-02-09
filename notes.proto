@@ -5,6 +5,10 @@ package notes;
 service NotesService {
     // The List method accepts an Empty Message and returns NoteList Message
     rpc List (Empty) returns (NoteList) {}
+    // Inset method accepts a Note message and returns the inserted Note as the response
+    rpc Insert (Note) returns (Note) {}
+    // Delete method accepts a NoteRequestId message and returns the deleted Note as the response
+    rpc DeleteNote (NoteRequestId) returns (Note) {}
 }
 
 message Empty {}
@@ -18,4 +22,8 @@ message Note {
 
 message NoteList {
     repeated Note notes = 1;
+}
+
+message NoteRequestId {
+    string id = 1;
 }
