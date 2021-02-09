@@ -1,14 +1,14 @@
 {
   "name": "node-grpc-server-note-crud",
   "version": "1.0.0",
-  "description": "gRPC Server and Client Example for CRUD Note Service",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest test"
-  },
   "author": "Leo Martinez",
+  "description": "gRPC Server and Client Example for CRUD Note Service",
   "license": "ISC",
   "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start:server": "cd ./server && node index.js"
+  },
   "dependencies": {
     "@grpc/grpc-js": "^1.2.6",
     "@grpc/proto-loader": "^0.5.6",

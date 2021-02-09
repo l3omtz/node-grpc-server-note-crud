@@ -3,11 +3,10 @@ syntax = "proto3";
 package notes;
 
 service NotesService {
-    // The List method accepts an Empty Message and returns NoteList Message
     rpc List (Empty) returns (NoteList) {}
-    // Inset method accepts a Note message and returns the inserted Note as the response
+    rpc Get (NoteRequestId) returns (Note) {}
     rpc Insert (Note) returns (Note) {}
-    // Delete method accepts a NoteRequestId message and returns the deleted Note as the response
+    rpc Update (Note) returns (Note) {}
     rpc DeleteNote (NoteRequestId) returns (Note) {}
 }
 
