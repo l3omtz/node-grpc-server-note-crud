@@ -1,10 +1,12 @@
 import client from './client.js';
+import prompt from 'prompt';
 
-client.get({id: 2}, (error, response) => {
-    if (!error) {
-        console.log('successfully fetch notes')
-        console.log(response)
-    } else {
-        console.error(error)
-    }
+prompt.start();
+prompt.get(['noteId'], function (err, result) {
+    if (err) console.log('bad input')
+
+    client.get({id:  result.noteId}, (error, response) => {
+        !error ? console.log(response) : console.error(error)
+    });
+
 });

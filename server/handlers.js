@@ -21,7 +21,7 @@ export const get = (call, callback) => {
     } else {
         callback({
             code: grpc.status.NOT_FOUND,
-            details: "Not found"
+            details: call.request.id + " not found"
         })
     }
 }
